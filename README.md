@@ -1,40 +1,19 @@
-# create-svelte
+# Issue with ESM packages like `clsx`
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+To reproduce:
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
+```
+pnpm install
+pnpm exec jest
 ```
 
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+Error message:
+```
+TypeError: clsx is not a function
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
+It should be noted that the code will work if the component is written with a CJS import:
+```diff
+- import clsx from 'clsx';
++ const clsx = require('clsx');
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
