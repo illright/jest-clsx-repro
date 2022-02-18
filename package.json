@@ -18,5 +18,8 @@
     "svelte": "^3.44.0",
     "svelte-jester": "^2.3.2"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "clsx": "^1.1.1"
+  }
 }

@@ -7,9 +7,13 @@ specifiers:
   '@sveltejs/kit': next
   '@testing-library/svelte': ^3.0.3
   babel-jest: ^27.5.1
+  clsx: ^1.1.1
   jest: ^27.5.1
   svelte: ^3.44.0
   svelte-jester: ^2.3.2
+
+dependencies:
+  clsx: 1.1.1
 
 devDependencies:
   '@babel/core': 7.17.5
@@ -1951,6 +1955,11 @@ packages:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
     dev: true
+
+  /clsx/1.1.1:
+    resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /co/4.6.0:
     resolution: {integrity: sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=}
