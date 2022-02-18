@@ -3,6 +3,7 @@
  */
 
 import { render } from '@testing-library/svelte';
+import userEvent from '@testing-library/user-event';
 import Index from './index.svelte';
 
 /**
@@ -24,6 +25,7 @@ describe('Index', () => {
   describe('once the component has been rendered', () => {
 
     test('should show the proper heading', () => {
+      userEvent.setup();
       expect(renderedComponent.getByText(/SvelteKit/)).toBeInTheDocument();
     });
 
